@@ -5,6 +5,8 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import gsap from 'gsap';
 import './App.css';
 
+import { useRef } from 'react';
+
 
 // "predeploy": "npm run build",
 // "deploy": "gh-pages -d dist"
@@ -13,7 +15,7 @@ const App = () => {
 
   gsap.registerPlugin(ScrollToPlugin);
 
-  const page1Ref = React.useRef(null);
+  const page1Ref = useRef(null);
 
   const scrollToPage1 = () => {
     console.log('Scrolling to Page 1');
@@ -46,19 +48,6 @@ const App = () => {
     gsap.to('.est', { delay: 1.2, duration: 1, opacity: 1, ease: 'power2.inOut' });
     gsap.to('.butt', { delay: 1.4, duration: 1, opacity: 1, ease: 'power2.inOut' });
 
-    const adjustIframeHeight = () => {
-      const iframe = document.getElementById('googleFormIframe');
-      if (iframe) {
-        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-      }
-    };
-
-    window.addEventListener('resize', adjustIframeHeight);
-
-    // Cleanup event listener
-    return () => {
-      window.removeEventListener('resize', adjustIframeHeight);
-    };
   }, []);
 
   return (
