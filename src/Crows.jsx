@@ -1,5 +1,5 @@
 import React from 'react'
-import './Crows.scss'
+import './Crows.css'
 
 const Crows = () => {
   return (

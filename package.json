@@ -8,10 +8,11 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
-    
   },
   "dependencies": {
     "gsap": "^3.12.5",
+    "netlify-cli": "^17.36.4",
+    "node-sass": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -33,4 +34,3 @@
     "vite": "^5.4.8"
   }
 }
-
